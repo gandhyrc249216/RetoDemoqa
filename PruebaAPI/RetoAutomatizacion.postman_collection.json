@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "dc5a3117-6fb6-4959-beac-458b57d86ff0",
+		"name": "RetoAutomatizacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11076723"
+	},
+	"item": [
+		{
+			"name": "ConsultarBookStore",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GenerarBookstore",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkdhbmRoeSIsInBhc3N3b3JkIjoiSmVubmVrZXBva2V0MTAjIiwiaWF0IjoxNzAxNDA2MjcyfQ.NwOJwQ6sFFQmhgUSXh2zEOEYdkshV5jnrqMJz0hzQv4"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"dd914370-1828-43f6-9e26-002e143e1cd3\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"9781449325862\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://demoqa.com/BookStore/v1/Books"
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarBookStore",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkdhbmRoeSIsInBhc3N3b3JkIjoiSmVubmVrZXBva2V0MTAjIiwiaWF0IjoxNzAxNDA2MjcyfQ.NwOJwQ6sFFQmhgUSXh2zEOEYdkshV5jnrqMJz0hzQv4"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://demoqa.com/BookStore/v1/Books?UserId=dd914370-1828-43f6-9e26-002e143e1cd3",
+					"protocol": "https",
+					"host": [
+						"demoqa",
+						"com"
+					],
+					"path": [
+						"BookStore",
+						"v1",
+						"Books"
+					],
+					"query": [
+						{
+							"key": "UserId",
+							"value": "dd914370-1828-43f6-9e26-002e143e1cd3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarBookStore",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IkdhbmRoeSIsInBhc3N3b3JkIjoiSmVubmVrZXBva2V0MTAjIiwiaWF0IjoxNzAxNDA2MjcyfQ.NwOJwQ6sFFQmhgUSXh2zEOEYdkshV5jnrqMJz0hzQv4"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"dd914370-1828-43f6-9e26-002e143e1cd3\",\r\n  \"isbn\": \"9781449325862\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://demoqa.com/BookStore/v1/Books/9781449331818"
+			},
+			"response": []
+		}
+	]
+}
